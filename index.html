@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style/style.css">
 	<title>todo</title>
 </head>
+
 <body>
 
 	<div class="container">
 		<div class="wrapper">
-			<header class="header">
-				<input class="header__input" type="text" placeholder="добавить новое дело">
-				<button class="header__button">Добавить</button>
-				<div class="header__remove"><img src="image/icon.png" alt="reload"></div>
-			</header>
 			<section class="content">
 				<h2 class="content__title">Список дел</h2>
-				<ul class="content__list">
-					
-				</ul>
+				<ul class="content__list"></ul>
 			</section>
-			<footer class="footer">Все права защищены ⓒ </footer>
+			<footer class="footer"><input class="footer__input" type="text" placeholder="добавить новое дело">
+				<button class="footer__button">Добавить</button>
+				<div class="footer__remove">
+					<?xml version="1.0" encoding="utf-8"?>
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z" stroke="#ff0000"
+							stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						<path
+							d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H10M15 5H17C18.1046 5 19 5.89543 19 7V12"
+							stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M14 16L16.5 18.5M19 21L16.5 18.5M16.5 18.5L19 16M16.5 18.5L14 21" stroke="#ff0000" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</div>
+			</footer>
 		</div>
 	</div>
 
 	<script src="main.js"></script>
 </body>
+
 </html>
