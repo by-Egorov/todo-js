@@ -1,6 +1,6 @@
 const inputText = document.querySelector('.footer__input')
 const addBtn = document.querySelector('.footer__button')
-const todoList = document.querySelector('.content__list')
+const todoList = document.querySelector('.content__list-body')
 const deleteBtn = document.querySelector('.footer__remove')
 
 let todos = localStorage.getItem('todos')
@@ -33,15 +33,17 @@ const renderTodo = () => {
 renderTodo()
 
 const createTodo = () => {
-	const newTodo = {
-		id: new Date(),
-		title: inputText.value,
+	if(inputText.value !== '') {
+		const newTodo = {
+			id: new Date(),
+			title: inputText.value,
+		}
+		todos.push(newTodo)
+		localStorage.setItem('todos', JSON.stringify(todos))
+	
+		renderTodo()
+		inputText.value = ''
 	}
-	todos.push(newTodo)
-	localStorage.setItem('todos', JSON.stringify(todos))
-
-	renderTodo()
-	inputText.value = ''
 }
 const removeAllTodo = () => {
 	localStorage.removeItem('todos')
